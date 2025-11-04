@@ -9,3 +9,5 @@ o proprio documento vai estar dentro do repositorio
 ensinar a baixar o arquivo pelo github
 
 deixa o link dos repositorios dos 2 projetos
+
+os documentos tem q ter no zip e no repositorio
