@@ -4,10 +4,10 @@ import { Button } from "../../components/ui/button";
 import { Card } from "../../components/ui/card";
 import { LogOut, ShoppingBag, Clock, ShoppingCart, User } from "lucide-react";
 import { toast } from "sonner";
-import pizzariaBella from "../../assets/pizzaria-bella.jpg";
-import burgerHouse from "../../assets/burger-house.jpg";
-import sushiMaster from "../../assets/sushi-master.jpg";
-import churrascoPremiun from "../../assets/churrasco-premium.jpg";
+import pizzariaBella from "../../../assets/pizzaria-bella.jpg";
+import burgerHouse from "../../../assets/burger-house.jpg";
+import sushiMaster from "../../../assets/sushi-master.jpg";
+import churrascoPremiun from "../../../assets/churrasco-premium.jpg";
 
 const restaurantes = [
   { id: 1, nome: "Pizzaria Bella", categoria: "Italiana", tempo: "30-40 min", avaliacao: 4.8, imagem: pizzariaBella },

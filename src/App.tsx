@@ -1,37 +1,37 @@
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as Sonner } from "./components/ui/sonner";
-import { TooltipProvider } from "./components/ui/tooltip";
+import { Toaster } from "./frontend/components/ui/toaster";
+import { Toaster as Sonner } from "./frontend/components/ui/sonner";
+import { TooltipProvider } from "./frontend/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import Index from "./frontend/pages/Index";
+import NotFound from "./frontend/pages/NotFound";
 
 // Auth
-import Cadastro from "./pages/auth/Cadastro";
-import CadastroCliente from "./pages/auth/CadastroCliente";
-import CadastroRestaurante from "./pages/auth/CadastroRestaurante";
-import CadastroEntregador from "./pages/auth/CadastroEntregador";
+import Cadastro from "./frontend/pages/auth/Cadastro";
+import CadastroCliente from "./frontend/pages/auth/CadastroCliente";
+import CadastroRestaurante from "./frontend/pages/auth/CadastroRestaurante";
+import CadastroEntregador from "./frontend/pages/auth/CadastroEntregador";
 
 // Cliente
-import DashboardCliente from "./pages/cliente/DashboardCliente";
-import RestauranteDetalhes from "./pages/cliente/RestauranteDetalhes";
-import Carrinho from "./pages/cliente/Carrinho";
-import PerfilCliente from "./pages/cliente/PerfilCliente";
+import DashboardCliente from "./frontend/pages/cliente/DashboardCliente";
+import RestauranteDetalhes from "./frontend/pages/cliente/RestauranteDetalhes";
+import Carrinho from "./frontend/pages/cliente/Carrinho";
+import PerfilCliente from "./frontend/pages/cliente/PerfilCliente";
 
 // Restaurante
-import DashboardRestaurante from "./pages/restaurante/DashboardRestaurante";
-import PerfilRestaurante from "./pages/restaurante/PerfilRestaurante";
-import GerenciarCardapio from "./pages/restaurante/GerenciarCardapio";
+import DashboardRestaurante from "./frontend/pages/restaurante/DashboardRestaurante";
+import PerfilRestaurante from "./frontend/pages/restaurante/PerfilRestaurante";
+import GerenciarCardapio from "./frontend/pages/restaurante/GerenciarCardapio";
 
 // Entregador
-import DashboardEntregador from "./pages/entregador/DashboardEntregador";
-import PerfilEntregador from "./pages/entregador/PerfilEntregador";
+import DashboardEntregador from "./frontend/pages/entregador/DashboardEntregador";
+import PerfilEntregador from "./frontend/pages/entregador/PerfilEntregador";
 
 // Super
-import LoginSuper from "./pages/super/LoginSuper";
-import DashboardSuper from "./pages/super/DashboardSuper";
-import EditarUsuario from "./pages/super/EditarUsuario";
-import EditarRestaurante from "./pages/super/EditarRestaurante";
+import LoginSuper from "./frontend/pages/super/LoginSuper";
+import DashboardSuper from "./frontend/pages/super/DashboardSuper";
+import EditarUsuario from "./frontend/pages/super/EditarUsuario";
+import EditarRestaurante from "./frontend/pages/super/EditarRestaurante";
 
 const queryClient = new QueryClient();
 
