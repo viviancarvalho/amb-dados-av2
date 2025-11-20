@@ -1,4 +1,4 @@
-◆ Sistema de Delivery – Projeto Acadêmico
+◆ Sistema de Delivery – Projeto Acadêmico  
 ► Sobre o Projeto  
 
 Este projeto tem como objetivo desenvolver um sistema de delivery inspirado no iFood, onde clientes podem visualizar restaurantes, montar pedidos e acompanhar o status, enquanto restaurantes e entregadores possuem suas próprias áreas de gerenciamento.  
@@ -12,14 +12,14 @@ Possui autenticação e perfis distintos:
 
 ► Tecnologias Utilizadas  
 
-▣ Backend  
+◆ Backend  
 
 - Node.js  
 - Express  
 - MySQL  
 - CORS  
 
-▣ Frontend  
+◆ Frontend  
   
 - React  
 - Vite  
@@ -112,7 +112,7 @@ Cria automaticamente um usuário ao cadastrar:
 
 ► Funcionalidades  
   
-▣ Cliente  
+◆ Cliente  
 - Ver lista de restaurantes  
 - Editar perfil (exceto CPF)  
 - Adicionar itens ao carrinho  
@@ -128,12 +128,12 @@ Cria automaticamente um usuário ao cadastrar:
 - Atualizar status  
 - Escolher entregador disponível  
 
-▣ Entregador  
+◆ Entregador  
 - Editar perfil (exceto CPF)  
 - Ver pedidos vinculados  
 - Disponibilidade controlada automaticamente  
 
-▣ Super Administrador  
+◆ Super Administrador  
 - Visualiza tudo  
 - Pode editar ou remover qualquer registro  
 - Gerencia restaurantes, clientes, entregadores e pedidos  
@@ -192,7 +192,7 @@ npm install
 cd frontend  
 npm install  
   
-5) Configurar MySQL  
+5) Configurar MySQL:  
 
 - No MySQL:  
   CREATE DATABASE sistema_delivery;  
