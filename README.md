@@ -1,14 +1,14 @@
 ◆ Sistema de Delivery – Projeto Acadêmico  
+  
 ► Sobre o Projeto  
-
 Este projeto tem como objetivo desenvolver um sistema de delivery inspirado no iFood, onde clientes podem visualizar restaurantes, montar pedidos e acompanhar o status, enquanto restaurantes e entregadores possuem suas próprias áreas de gerenciamento.  
 
 Possui autenticação e perfis distintos:  
-  
 - Cliente  
 - Restaurante  
 - Entregador  
 - Administrador (Super Admin)  
+
 
 ► Tecnologias Utilizadas  
 
@@ -27,6 +27,7 @@ Possui autenticação e perfis distintos:
 - HTML  
 - CSS  
 - TailwindCSS  
+
 
 ► Modelagem do Banco de Dados  
 
@@ -110,6 +111,7 @@ Cria automaticamente um usuário ao cadastrar:
 - Restaurante  
 - Entregador  
 
+
 ► Funcionalidades  
   
 ◆ Cliente  
@@ -121,7 +123,7 @@ Cria automaticamente um usuário ao cadastrar:
 - Finalizar compra  
 - Ver histórico de pedidos  
 
-▣ Restaurante  
+◆ Restaurante  
 - Gerenciar cardápio (CRUD)  
 - Editar perfil (exceto CNPJ)  
 - Visualizar pedidos recebidos  
@@ -172,6 +174,7 @@ Pode ser criado executando o script SQL que acompanha o projeto, contendo:
 - Criação das tabelas  
 - Relacionamentos  
 - Triggers  
+
   
 ► Interface  
   
@@ -179,6 +182,7 @@ Criada com React, com foco em:
 - Navegação clara  
 - Layout simples  
 - Telas específicas por tipo de usuário  
+
   
 ► Instalação  
 1) Clonar repositório  
