@@ -2,35 +2,33 @@
   
 ► Sobre o Projeto  
 Este projeto tem como objetivo desenvolver um sistema de delivery inspirado no iFood, onde clientes podem visualizar restaurantes, montar pedidos e acompanhar o status, enquanto restaurantes e entregadores possuem suas próprias áreas de gerenciamento.  
-
+  
 Possui autenticação e perfis distintos:  
 - Cliente  
 - Restaurante  
 - Entregador  
 - Administrador (Super Admin)  
-
-
+  
+  
 ► Tecnologias Utilizadas  
-
+  
 ◆ Backend  
-
 - Node.js  
 - Express  
 - MySQL  
 - CORS  
 
 ◆ Frontend  
-  
 - React  
 - Vite  
 - JavaScript  
 - HTML  
 - CSS  
 - TailwindCSS  
-
-
+  
+  
 ► Modelagem do Banco de Dados  
-
+  
 O banco reflete a estrutura de um sistema de delivery real, com entidades:  
 - Cliente  
 - Restaurante  
@@ -39,9 +37,9 @@ O banco reflete a estrutura de um sistema de delivery real, com entidades:
 - Pedido  
 - ItemPedido  
 - Usuário (para login e autenticação)  
-
+  
 ► Tabelas  
-
+  
 ◆ Cliente
 | Campo        | Tipo    |
 |--------------|---------|
@@ -100,18 +98,18 @@ O banco reflete a estrutura de um sistema de delivery real, com entidades:
 | PedidoID       | FK      |
 | quantidade     | INT     |
 | preco_unitario | DECIMAL |
-
+  
 ► Triggers Implementados  
-
+  
 - Atualiza automaticamente o valor total do pedido  
 - Altera automaticamente a disponibilidade do entregador  
-
+  
 Cria automaticamente um usuário ao cadastrar:  
 - Cliente  
 - Restaurante  
 - Entregador  
-
-
+  
+  
 ► Funcionalidades  
   
 ◆ Cliente  
@@ -122,27 +120,27 @@ Cria automaticamente um usuário ao cadastrar:
 - Remover itens  
 - Finalizar compra  
 - Ver histórico de pedidos  
-
+  
 ◆ Restaurante  
 - Gerenciar cardápio (CRUD)  
 - Editar perfil (exceto CNPJ)  
 - Visualizar pedidos recebidos  
 - Atualizar status  
 - Escolher entregador disponível  
-
+  
 ◆ Entregador  
 - Editar perfil (exceto CPF)  
 - Ver pedidos vinculados  
 - Disponibilidade controlada automaticamente  
-
+  
 ◆ Super Administrador  
 - Visualiza tudo  
 - Pode editar ou remover qualquer registro  
 - Gerencia restaurantes, clientes, entregadores e pedidos  
-
-
+  
+  
 ► Endpoints da API  
-
+  
 Organização REST por entidade:  
 /cliente  
 /restaurante  
@@ -151,47 +149,47 @@ Organização REST por entidade:
 /item  
 /item_pedido  
 /usuario  
-
+  
 Cada rota possui métodos:  
 - GET  
 - POST  
 - PUT  
 - DELETE  
-
+  
 ► Arquivo api.js  
-
+  
 Contém funções como:  
 - criarCliente()  
 - listarTodosRestaurantes()  
 - buscarUsuarioPorLoginSenha()  
 - criarItemPedido()  
-- atualizarStatusPedido()  
-  
+- atualizarStatusPedido()
+    
 Cada função realiza uma chamada fetch para o backend Node.js que manipula o MySQL.  
-  
+    
 ► Banco de Dados  
 Pode ser criado executando o script SQL que acompanha o projeto, contendo:  
 - Criação das tabelas  
 - Relacionamentos  
 - Triggers  
-
   
+    
 ► Interface  
-  
+    
 Criada com React, com foco em:  
 - Navegação clara  
 - Layout simples  
 - Telas específicas por tipo de usuário  
-
   
+    
 ► Instalação  
 1) Clonar repositório  
 git clone https://github.com/viviancarvalho/amb-dados-av2  
-  
+   
 2) Instalar dependências do backend  
 cd backend  
 npm install  
-  
+   
 4) Instalar dependências do frontend  
 cd frontend  
 npm install  
