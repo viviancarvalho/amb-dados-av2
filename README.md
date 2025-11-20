@@ -13,13 +13,13 @@ O sistema possui autenticação e perfis distintos de acesso:
 
 ▶ Tecnologias Utilizadas
 
-► Backend
+➜ Backend
 - Node.js
 - Express
 - MySQL
 - CORS
 
-► Frontend
+➜ Frontend
 - React
 - Vite
 - JavaScript
@@ -41,7 +41,7 @@ O banco de dados reflete a estrutura básica de funcionamento de um sistema de d
 
 ▶ Tabelas
 
-► Cliente
+➜ Cliente
 | Campo        | Tipo         |
 |-------------|--------------|
 | id cliente  | INT          |
@@ -50,7 +50,7 @@ O banco de dados reflete a estrutura básica de funcionamento de um sistema de d
 | endereço    | VARCHAR      |
 | cpf         | CHAR         |
 
-► Restaurante
+➜ Restaurante
 | Campo          | Tipo     |
 |----------------|----------|
 | id restaurante | INT      |
@@ -60,7 +60,7 @@ O banco de dados reflete a estrutura básica de funcionamento de um sistema de d
 | endereço       | VARCHAR  |
 | cnpj           | CHAR     |
 
-► Entregador
+➜ Entregador
 | Campo         | Tipo     |
 |---------------|----------|
 | id entregador | INT      |
@@ -71,7 +71,7 @@ O banco de dados reflete a estrutura básica de funcionamento de um sistema de d
 | placa         | CHAR     |
 | disponível    | BOOLEAN  |
 
-► Pedido
+➜ Pedido
 | Campo          | Tipo                                           |
 |----------------|------------------------------------------------|
 | id pedido      | INT                                            |
@@ -82,7 +82,7 @@ O banco de dados reflete a estrutura básica de funcionamento de um sistema de d
 | status         | ENUM("Em preparo", "A caminho", "Entregue")    |
 | valor total    | DECIMAL                                        |
 
-► Item
+➜ Item
 | Campo         | Tipo      |
 |---------------|-----------|
 | ItemID        | INT       |
@@ -91,7 +91,7 @@ O banco de dados reflete a estrutura básica de funcionamento de um sistema de d
 | descricao     | VARCHAR   |
 | preco         | DECIMAL   |
 
-► ItemPedido
+➜ ItemPedido
 | Campo          | Tipo    |
 |----------------|---------|
 | ItemPedidoID   | INT     |
@@ -108,7 +108,7 @@ O banco de dados reflete a estrutura básica de funcionamento de um sistema de d
 
 ▶ Funcionalidades do Sistema
 
-► Cliente
+➜ Cliente
 
 - Ver todos os restaurantes (com fotos)
 - Acessar e editar seu perfil (exceto CPF)
@@ -118,7 +118,7 @@ O banco de dados reflete a estrutura básica de funcionamento de um sistema de d
 - Finalizar pedido (pagamento simulado)
 - Visualizar histórico de pedidos
 
-► Restaurante
+➜ Restaurante
 
 - Ver e gerenciar seu cardápio
 - Adicionar, editar e excluir itens
@@ -127,13 +127,13 @@ O banco de dados reflete a estrutura básica de funcionamento de um sistema de d
 - Atualizar status do pedido
 - Selecionar um entregador disponível para o pedido
 
-► Entregador
+➜ Entregador
 
 - Página de perfil (alteração exceto CPF)
 - Lista de pedidos vinculados ao seu ID
 - Disponibilidade controlada automaticamente pelo sistema
 
-► Super Administrador (Painel Geral)
+➜ Super Administrador (Painel Geral)
 
 - Pode visualizar tudo
 - Pode editar ou excluir qualquer registro
@@ -151,11 +151,11 @@ A API segue uma arquitetura REST organizada por entidades:
 /item_pedido
 /usuario
 
-Cada rota oferece métodos de:
-GET
-POST
-PUT
-DELETE
+➜ Cada rota oferece métodos de:
+- GET
+- POST
+- PUT
+- DELETE
 
 O arquivo api.js concentra todas as chamadas ao backend utilizando fetch.
 
@@ -163,11 +163,11 @@ O arquivo api.js concentra todas as chamadas ao backend utilizando fetch.
 
 O arquivo inclui funções como:
 
-criarCliente()
-listarTodosRestaurantes()
-buscarUsuarioPorLoginSenha()
-criarItemPedido()
-atualizarStatusPedido()
+- criarCliente()
+- listarTodosRestaurantes()
+- buscarUsuarioPorLoginSenha()
+- criarItemPedido()
+- atualizarStatusPedido()
 e dezenas de outras.
 
 Cada função se conecta com a API Node.js para manipular os dados no MySQL.
@@ -175,26 +175,21 @@ Cada função se conecta com a API Node.js para manipular os dados no MySQL.
 ▶ Banco de Dados
 
 O banco pode ser criado executando o script SQL completo presente no projeto, contendo:
-Criação das tabelas
-Relacionamentos
-Triggers
+- Criação das tabelas
+- Relacionamentos
+- Triggers
 
 ▶ Interface
 
 A interface foi desenvolvida em React + Vite, com foco em:
-Simplicidade
-Clareza
-Boa visualização da navegação
-Telas específicas para cada tipo de usuário
-
-Tela inicial inclui três abas:
-Login como Cliente
-Login como Restaurante
-Login como Entregador
+- Simplicidade
+- Clareza
+- Boa visualização da navegação
+- Telas específicas para cada tipo de usuário
 
 ▶ Instalação
 1️) Clonar o repositório
-git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO
+git clone https://github.com/viviancarvalho/amb-dados-av2
 
 2️) Instalar dependências (backend)
 cd backend
