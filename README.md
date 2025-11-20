@@ -1,66 +1,65 @@
-🍽️ Sistema de Delivery – Projeto Acadêmico
+◆ Sistema de Delivery – Projeto Acadêmico
+► Sobre o Projeto
 
-▶ Sobre o projeto
+Este projeto tem como objetivo desenvolver um sistema de delivery inspirado no iFood, onde clientes podem visualizar restaurantes, montar pedidos e acompanhar o status, enquanto restaurantes e entregadores possuem suas próprias áreas de gerenciamento.
 
-Este projeto tem como objetivo desenvolver um sistema de delivery inspirado no iFood, onde clientes podem visualizar restaurantes, montar pedidos e acompanhar o status, enquanto restaurantes e entregadores possuem áreas próprias para gerenciamento.
+Possui autenticação e perfis distintos:
 
-O sistema possui autenticação e perfis distintos de acesso:
+Cliente
+Restaurante
+Entregador
+Administrador (Super Admin)
 
-- Cliente
-- Restaurante
-- Entregador
-- Administrador (Super Admin)
+► Tecnologias Utilizadas
+▣ Backend
 
-▶ Tecnologias Utilizadas
+Node.js
+Express
+MySQL
+CORS
 
-➜ Backend
-- Node.js
-- Express
-- MySQL
-- CORS
+▣ Frontend
 
-➜ Frontend
-- React
-- Vite
-- JavaScript
-- HTML
-- CSS
-- TailwindCSS
+React
+Vite
+JavaScript
+HTML
+CSS
+TailwindCSS
 
-▶ Modelagem do Banco de Dados
+► Modelagem do Banco de Dados
 
-O banco de dados reflete a estrutura básica de funcionamento de um sistema de delivery real, contendo:
+O banco reflete a estrutura de um sistema de delivery real, com entidades:
+Cliente
+Restaurante
+Entregador
+Item
+Pedido
+ItemPedido
+Usuário (para login e autenticação)
 
-- Cliente
-- Restaurante
-- Entregador
-- Item de Cardápio
-- Pedido
-- Itens dentro do Pedido
-- Usuário para login e autenticação
+► Tabelas
 
-▶ Tabelas
+◆ Cliente
+| Campo        | Tipo    |
+|--------------|---------|
+| id cliente   | INT     |
+| nome         | VARCHAR |
+| telefone     | VARCHAR |
+| endereço     | VARCHAR |
+| cpf          | CHAR    |
 
-➜ Cliente
-| Campo        | Tipo         |
-|-------------|--------------|
-| id cliente  | INT          |
-| nome        | VARCHAR      |
-| telefone    | VARCHAR      |
-| endereço    | VARCHAR      |
-| cpf         | CHAR         |
+◆ Restaurante
+| Campo          | Tipo    |
+|----------------|---------|
+| id restaurante | INT     |
+| nome           | VARCHAR |
+| tipo cozinha   | VARCHAR |
+| telefone       | VARCHAR |
+| endereço       | VARCHAR |
+| cnpj           | CHAR    |
 
-➜ Restaurante
-| Campo          | Tipo     |
-|----------------|----------|
-| id restaurante | INT      |
-| nome           | VARCHAR  |
-| tipo cozinha   | VARCHAR  |
-| telefone       | VARCHAR  |
-| endereço       | VARCHAR  |
-| cnpj           | CHAR     |
-
-➜ Entregador
+◆ Entregador
 | Campo         | Tipo     |
 |---------------|----------|
 | id entregador | INT      |
@@ -71,27 +70,27 @@ O banco de dados reflete a estrutura básica de funcionamento de um sistema de d
 | placa         | CHAR     |
 | disponível    | BOOLEAN  |
 
-➜ Pedido
-| Campo          | Tipo                                           |
-|----------------|------------------------------------------------|
-| id pedido      | INT                                            |
-| id cliente     | FK                                             |
-| id restaurante | FK                                             |
-| id entregador  | FK                                             |
-| data/hora      | DATETIME                                       |
-| status         | ENUM("Em preparo", "A caminho", "Entregue")    |
-| valor total    | DECIMAL                                        |
+◆ Pedido
+| Campo          | Tipo                                        |
+|----------------|---------------------------------------------|
+| id pedido      | INT                                         |
+| id cliente     | FK                                          |
+| id restaurante | FK                                          |
+| id entregador  | FK                                          |
+| data/hora      | DATETIME                                    |
+| status         | ENUM("Em preparo", "A caminho", "Entregue") |
+| valor total    | DECIMAL                                     |
 
-➜ Item
-| Campo         | Tipo      |
-|---------------|-----------|
-| ItemID        | INT       |
-| RestauranteID | FK        |
-| nome          | VARCHAR   |
-| descricao     | VARCHAR   |
-| preco         | DECIMAL   |
+◆ Item (Cardápio)
+| Campo         | Tipo    |
+|---------------|---------|
+| ItemID        | INT     |
+| RestauranteID | FK      |
+| nome          | VARCHAR |
+| descricao     | VARCHAR |
+| preco         | DECIMAL |
 
-➜ ItemPedido
+◆ ItemPedido
 | Campo          | Tipo    |
 |----------------|---------|
 | ItemPedidoID   | INT     |
@@ -100,48 +99,48 @@ O banco de dados reflete a estrutura básica de funcionamento de um sistema de d
 | quantidade     | INT     |
 | preco_unitario | DECIMAL |
 
-▶ Triggers implementados
+► Triggers Implementados
 
-- Atualização automática do valor total do pedido
-- Alteração automática da disponibilidade do entregador
-- Criação automática de usuário ao cadastrar Cliente, Restaurante ou Entregador
+Atualiza automaticamente o valor total do pedido
+Altera automaticamente a disponibilidade do entregador
 
-▶ Funcionalidades do Sistema
+Cria automaticamente um usuário ao cadastrar:
+Cliente
+Restaurante
+Entregador
 
-➜ Cliente
+► Funcionalidades
 
-- Ver todos os restaurantes (com fotos)
-- Acessar e editar seu perfil (exceto CPF)
-- Adicionar itens ao carrinho
-- Alterar quantidade de itens
-- Remover itens
-- Finalizar pedido (pagamento simulado)
-- Visualizar histórico de pedidos
+▣ Cliente
+Ver lista de restaurantes
+Editar perfil (exceto CPF)
+Adicionar itens ao carrinho
+Atualizar quantidade
+Remover itens
+Finalizar compra
+Ver histórico de pedidos
 
-➜ Restaurante
+▣ Restaurante
+Gerenciar cardápio (CRUD)
+Editar perfil (exceto CNPJ)
+Visualizar pedidos recebidos
+Atualizar status
+Escolher entregador disponível
 
-- Ver e gerenciar seu cardápio
-- Adicionar, editar e excluir itens
-- Atualizar perfil (exceto CNPJ)
-- Visualizar pedidos recebidos
-- Atualizar status do pedido
-- Selecionar um entregador disponível para o pedido
+▣ Entregador
+Editar perfil (exceto CPF)
+Ver pedidos vinculados
+Disponibilidade controlada automaticamente
 
-➜ Entregador
+▣ Super Administrador
+Visualiza tudo
+Pode editar ou remover qualquer registro
+Gerencia restaurantes, clientes, entregadores e pedidos
 
-- Página de perfil (alteração exceto CPF)
-- Lista de pedidos vinculados ao seu ID
-- Disponibilidade controlada automaticamente pelo sistema
 
-➜ Super Administrador (Painel Geral)
+► Endpoints da API
 
-- Pode visualizar tudo
-- Pode editar ou excluir qualquer registro
-- Pode gerenciar usuários, restaurantes, entregadores e pedidos
-
-▶ Endpoints da API
-
-A API segue uma arquitetura REST organizada por entidades:
+Organização REST por entidade:
 
 /cliente
 /restaurante
@@ -151,69 +150,65 @@ A API segue uma arquitetura REST organizada por entidades:
 /item_pedido
 /usuario
 
-➜ Cada rota oferece métodos de:
-- GET
-- POST
-- PUT
-- DELETE
 
-O arquivo api.js concentra todas as chamadas ao backend utilizando fetch.
+Cada rota possui métodos:
+GET
+POST
+PUT
+DELETE
 
-▶ Estrutura — Arquivo api.js
+► Arquivo api.js
 
-O arquivo inclui funções como:
+Contém funções como:
 
-- criarCliente()
-- listarTodosRestaurantes()
-- buscarUsuarioPorLoginSenha()
-- criarItemPedido()
-- atualizarStatusPedido()
-e dezenas de outras.
+criarCliente()
+listarTodosRestaurantes()
+buscarUsuarioPorLoginSenha()
+criarItemPedido()
+atualizarStatusPedido()
 
-Cada função se conecta com a API Node.js para manipular os dados no MySQL.
+Cada função realiza uma chamada fetch para o backend Node.js que manipula o MySQL.
 
-▶ Banco de Dados
+► Banco de Dados
 
-O banco pode ser criado executando o script SQL completo presente no projeto, contendo:
-- Criação das tabelas
-- Relacionamentos
-- Triggers
+Pode ser criado executando o script SQL que acompanha o projeto, contendo:
+Criação das tabelas
+Relacionamentos
+Triggers
 
-▶ Interface
+► Interface
 
-A interface foi desenvolvida em React + Vite, com foco em:
-- Simplicidade
-- Clareza
-- Boa visualização da navegação
-- Telas específicas para cada tipo de usuário
+Criada com React, com foco em:
+Navegação clara
+Layout simples
+Telas específicas por tipo de usuário
 
-▶ Instalação
-1️) Clonar o repositório
+► Instalação
+1) Clonar repositório
 git clone https://github.com/viviancarvalho/amb-dados-av2
 
-2️) Instalar dependências (backend)
+2) Instalar dependências do backend
 cd backend
 npm install
 
-3️) Instalar dependências (frontend)
+3) Instalar dependências do frontend
 cd frontend
 npm install
 
-4️) Configurar MySQL
-Execute no MySQL:
+4) Configurar MySQL
 
+No MySQL:
 CREATE DATABASE sistema_delivery;
 
-E depois importe o script completo disponível no projeto.
 
-5️) Rodar servidor backend
+Depois importe o script SQL completo do projeto.
+
+5) Rodar servidor backend
 node index.js
 
-6️) Rodar frontend
+6) Rodar frontend
 npm run dev
 
-▶ Autores
-Projeto acadêmico desenvolvido por:
-
-- Vivian Carvalho de Abreu Matos
-- Guilherme Abrunheiro de Souza
+► Autores
+Vivian Carvalho de Abreu Matos
+Guilherme Abrunheiro de Souza
