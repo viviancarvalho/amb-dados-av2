@@ -59,13 +59,13 @@ Siga os passos abaixo para instalar, configurar e executar o sistema DeliveryFlo
 Abra o terminal (CMD, PowerShell ou Bash) e execute:
 
 ```bash
-git clone https://github.com/seu-usuario/deliveryflow-system.git
+git clone https://github.com/viviancarvalho/amb-dados-av2
 ```
 
 Entre na pasta do projeto:
 
 ```bash
-cd deliveryflow-system
+cd amb-dados-av2-main
 ```
 
 ### 2. Configurar o Banco de Dados
