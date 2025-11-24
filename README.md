@@ -6,7 +6,7 @@ O DeliveryFlow é um sistema full-stack desenvolvido para oferecer uma solução
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### Backend
 - **Node.js** - Ambiente de execução JavaScript
@@ -153,8 +153,8 @@ Copie e cole esse endereço no navegador, ou aperte `Ctrl + Click` no link que a
 
 ## Autoria
 
-Vivian Carvalho de Abreu Matos
-Guilherme Abrunheiro de Souza
+Vivian Carvalho de Abreu Matos  
+Guilherme Abrunheiro de Souza  
 4º Semestre – Ciência da Computação  
 Universidade de Fortaleza - UNIFOR
 
