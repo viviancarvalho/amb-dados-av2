@@ -13,19 +13,16 @@ O DeliveryFlow é um sistema full-stack desenvolvido para oferecer uma solução
 - **Express** - Framework web para Node.js
 - **MySQL** - Banco de dados relacional
 - **CORS** - Middleware para comunicação entre frontend e backend
+- **mysql2** - Driver MySQL para Node.js
 
 ### Frontend
 - **React** - Biblioteca para interface de usuário
 - **Vite** - Ferramenta de build e desenvolvimento
 - **JavaScript** - Linguagem de programação
+- **TypeScript** - Superset JavaScript com tipagem estática
 - **HTML** - Estruturação de páginas web
 - **CSS** - Estilização
 - **TailwindCSS** - Framework CSS utilitário
-
-### Bibliotecas principais:
-- **Axios** — Cliente HTTP para consumir a API do backend
-- **MySQL2** — Driver MySQL para Node.js
-- **Dayjs** — Manipulação simplificada de datas e horários
 
 ---
 
@@ -104,7 +101,7 @@ const db = mysql2.createPool({
     host: "localhost",
     user: "root", 
     password: "sua_senha_aqui",
-    database: "deliverySystem",
+    database: "sistema_delivery",
 });
 ```
 
